@@ -1,0 +1,19 @@
+
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 150px;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.features p {
+    margin-top: 14px;
+    width: 280px;
+}
+
+.features div {
+    margin-top: 14px;
+    max-width: 300px;
+    text-align: left;
+}

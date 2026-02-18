@@ -1,0 +1,88 @@
+.homepage {
+    margin: 20px 40px 30px 30px;
+    font-size: 13px;
+}
+
+.homepage a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer {
+    background: #eee;
+    padding: 60px;
+    text-align: start;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+}
+
+
+.footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-col ul {
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+
+}
+
+.footer-col li {
+    font-size: 13px;
+    margin-bottom: 19px;
+    color: #666;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-col li:hover {
+    color: black;
+}
+
+
+.newsletter input {
+    width: 393px;
+    border: none;
+    border-bottom: 1px solid #999;
+    background: transparent;
+    padding: 8px 0;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.newsletter input:focus {
+    border-bottom: 1px solid black;
+}
+
+.newsletter button {
+    width: 100%;
+    padding: 12px;
+    background: #dcdcdc;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background: #cfcfcf;
+}
+
+
+.footer-bottom {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #444;
+}

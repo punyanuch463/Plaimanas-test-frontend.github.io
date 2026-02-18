@@ -1,0 +1,208 @@
+/* 
+สำหรับสร้าง dropdown เลือกภาษาโดยไม่ได้ใช้ select tag 
+เพื่อ custom design ตามที่ figma ออกแบบมา
+*/
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.arrow {
+    font-size: 10px;
+    transition: 0.2s ease;
+}
+
+.lang-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    background: white;
+    list-style: none;
+    padding: 6px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: 0.2s ease;
+}
+
+.language-dropdown:hover .lang-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.language-dropdown:hover .selected-text {
+    color: #999;
+}
+
+.lang-menu li {
+    left: 10px;
+    width: 79px;
+    height: 36px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.lang-menu li:hover {
+
+    font-size: 14px;
+    font-weight: 400;
+    background: #f2f2f2;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.main-menu {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    cursor: pointer;
+    color: #000;
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+
+.menu-item:hover {
+    font-weight: 700;
+}
+
+/* 
+ส่วน editorial ที่เป็น dropdown menu
+ ที่ซ้อนอยู่ใน main menu จะเเสดงเมื่อ hover ที่เมนู editorial
+*/
+.editorial-title {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.editorial-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.editorial-item {
+    margin: 14px 0;
+    font-size: 20px;
+    color: white;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+    cursor: pointer;
+}
+
+
+.editorial-item:hover {
+    transform: scale(1.2);
+    letter-spacing: 2px;
+}
+
+/* 
+ขึ้น overlay หน้าจอสีดำทั้งหมดจาก inset 0 เเละ fixed ตำเเหน่งไว้
+*/
+.editorial-overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 120px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 900;
+}
+
+/* 
+เมื่อเกินตัวอักษรก็จะซ่อนหน้าจอดำกลับเป็นเหมือนเดิม
+*/
+.editorial-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.editorial-menu {
+    color: white;
+    text-align: left;
+}
+
+.editorial-menu ul {
+    display: block;
+    color: white;
+    list-style: none;
+    padding: 0;
+}
+
+.editorial-menu ul li {
+    margin: 12px 0;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sign-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.cart-link img {
+    width: 18px;
+    height: auto;
+    display: block;
+}
